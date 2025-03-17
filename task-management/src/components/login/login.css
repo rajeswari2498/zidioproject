@@ -1,0 +1,207 @@
+/* Centering the login card */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff; /* Set to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Login Card Container */
+.login-card {
+  background: #ffffff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-card:hover {
+  transform: scale(1.02);
+}
+
+/* Card Header */
+.login-card h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* Social Login Buttons */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  width: 48%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.google-btn {
+  background-color: #db4437;
+  color: white;
+}
+
+.github-btn {
+  background-color: #24292e;
+  color: white;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Separator Line */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+  font-size: 14px;
+  color: #777;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 10px; /* Adds spacing between text and lines */
+}
+
+
+/* Input Fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #56AB2F;
+  outline: none;
+}
+
+/* Remember Me & Forgot Password */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 14px;
+  align-items: center; /* Ensure everything is aligned */
+}
+
+.options label {
+  display: flex;
+  align-items: center; /* Aligns checkbox with text */
+  gap: 8px; /* Adds space between checkbox and text */
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.options a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #A8E063, #56AB2F);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #56AB2F, #A8E063);
+  transform: translateY(-2px);
+}
+
+/* Create Account */
+.create-account {
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.create-account a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Popup Message */
+.popup {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 14px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeInOut 2.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0px); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0px); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
