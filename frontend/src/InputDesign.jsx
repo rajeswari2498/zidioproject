@@ -127,7 +127,7 @@ const Navbar = () => {
       <div className="flex gap-8 items-center">
         <nav className="flex gap-5 max-sm:hidden">
           <button className="px-5 py-2.5 text-sm font-semibold text-indigo-50 bg-sky-800 rounded-lg transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease-in-out] shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
-            <Link to="/admin">DASHBOARD</Link>
+            <Link to="/selectrole">DASHBOARD</Link>
           </button>
           <button className="px-5 py-2.5 text-sm font-semibold text-indigo-50 bg-lime-600 rounded-lg transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease-in-out] shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
           <Link to="/report">REPORT</Link> 
