@@ -11,7 +11,7 @@ const Login = () => {
   const handleOAuthLogin = (provider) => {
     let authUrl = "";
     if (provider === "google") {
-      authUrl = `https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost:3000/auth/callback&response_type=token&scope=email`;
+      authUrl = `https://accounts.google.com/o/oauth2/auth?client_id=315960574033-3079j1iormd17tka82cevapanvrp6lkp.apps.googleusercontent.com&redirect_uri=http://localhost:3000/auth/callback&response_type=token&scope=email`;
     } else if (provider === "github") {
       authUrl = `https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&redirect_uri=http://localhost:3000`;
     }
