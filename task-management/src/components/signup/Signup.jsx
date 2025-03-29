@@ -27,8 +27,15 @@ export default function Signup() {
       existingUsers.push(newUser);
       localStorage.setItem("users", JSON.stringify(existingUsers));
 
-      // Store full name in localStorage
-      localStorage.setItem("userData", JSON.stringify({ fullName: name }));
+      // Store full user details in "userData" for settings page
+      localStorage.setItem("userData", JSON.stringify({ 
+        fullName: name, 
+        email, 
+        password,
+        mobileNumber: "", 
+        address: "", 
+        profilePicture: null 
+      }));
 
       setPopupMessage(`✅ ${name}, your account has been created!`);
       

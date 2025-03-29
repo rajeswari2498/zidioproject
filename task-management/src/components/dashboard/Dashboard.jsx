@@ -3,7 +3,7 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Navbar from "../navbar/Navbar";
 import "./dashboard.css";
 
-const Dashboard = () => {
+const UpwardDashboard = () => {
   // Fetch the logged-in user's email from localStorage
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const userEmail = storedUser?.email;
@@ -172,4 +172,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UpwardDashboard;

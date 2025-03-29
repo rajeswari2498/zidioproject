@@ -7,6 +7,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Message from "./components/message/Message";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
+import Settings from "./components/settings/Settings";  // Import Settings Page
 
 function App() {
   const [isVerified, setIsVerified] = useState(false);
@@ -36,6 +37,10 @@ function App() {
         <Route 
           path="/messages" 
           element={isAuthenticated && isVerified ? <Message /> : <Navigate to="/login" />} 
+        />
+        <Route 
+          path="/settings" 
+          element={isAuthenticated && isVerified ? <Settings /> : <Navigate to="/login" />} 
         />
       </Routes>
     </Router>
