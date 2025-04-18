@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaUserPlus,
   FaUserCircle,
+  FaRegCalendarAlt ,
 } from "react-icons/fa";
 import com1logo from './assest/com1logo.png';
 
@@ -66,6 +67,11 @@ const Navbar = () => {
             <Link to="/Communication1" className="hover:text-gray-300">
               <FaEnvelope title="Communication1" />
             </Link>
+            
+            <Link to="/Meetings" className="flex items-center space-x-2 hover:text-gray-300">
+  <FaRegCalendarAlt />
+  <span>Meetings</span>
+</Link>
 
             <div className="relative flex items-center">
               <input

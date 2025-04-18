@@ -17,6 +17,7 @@ import ViewerDashboard from './ViewerDashboard';
 import Report from './Report';
 import ResetPassword from './ResetPassword';
 import Verified from './Verified';
+import MeetingRoom from './Meetings';
 
 function App() {
   const [isVerified, setIsVerified] = useState(false);
@@ -35,6 +36,9 @@ function App() {
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
+
+    // ✅ Define username here
+    const username = JSON.parse(localStorage.getItem("userData"))?.username || "guest";
 
   return (
     <Router>
@@ -68,6 +72,11 @@ function App() {
           path="/settings" 
           element={isAuthenticated && isVerified ? <Settings /> : <Navigate to="/login" />} 
         />
+        <Route
+  path="/meetings"
+  element={isAuthenticated && isVerified ? <MeetingRoom username={username} /> : <Navigate to="/login" />}
+/>
+
         <Route path='/report' element={<Report />} />
         <Route path='/resetpassword' element={<ResetPassword />} />
         <Route path='/verified' element={<Verified />} />
